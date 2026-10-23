@@ -11,6 +11,12 @@ node_modules/
 *.log
 npm-debug.log*
 
+# Build & Deployment artifacts
+dist/
+build/
+.output/
+.vercel/
+
 # OS / Editor files
 .DS_Store
 Thumbs.db

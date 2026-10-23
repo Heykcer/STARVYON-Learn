@@ -62,6 +62,24 @@ window.STARVYONViewer = {
       }
     }
 
+    // Render mathematical formulations with KaTeX if loaded
+    var mainPane = container.querySelector("#viewer-main-pane");
+    if (mainPane && window.renderMathInElement) {
+      try {
+        window.renderMathInElement(mainPane, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true }
+          ],
+          throwOnError: false
+        });
+      } catch (e) {
+        console.warn("KaTeX render error:", e);
+      }
+    }
+
     // Attach handlers
     this.attachViewerHandlers(container, course, topicMeta);
     window.scrollTo(0, 0);
