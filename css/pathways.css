@@ -1,0 +1,117 @@
+/* STARVYON Learn - Learning Pathways Styling */
+
+.page-header-band {
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid var(--border-hairline);
+  background: var(--bg-canvas);
+  margin-bottom: 2.5rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.page-subtitle {
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  max-width: 720px;
+}
+
+/* Pathways Master List */
+.pathway-master-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.pathway-block {
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  border-radius: var(--radius-subtle);
+  padding: 2.25rem;
+}
+
+.pathway-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.pathway-block-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.pathway-block-meta {
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.pathway-linked-courses-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin-bottom: 1rem;
+}
+
+/* 2-column layout for courses inside a pathway (Never 3 cards in a row!) */
+.pathway-courses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.linked-course-card {
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-canvas);
+  padding: 1.25rem;
+  border-radius: var(--radius-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.linked-course-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.linked-course-summary {
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  margin-bottom: 1rem;
+}
+
+.linked-course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.pathway-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .pathway-courses-grid {
+    grid-template-columns: 1fr;
+  }
+}

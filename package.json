@@ -1,0 +1,27 @@
+{
+  "name": "starvyon-learn",
+  "version": "1.0.0",
+  "description": "STARVYON Learn - Engineering-Grade Artificial Intelligence & Systems Engineering Curriculum",
+  "main": "js/app.js",
+  "scripts": {
+    "db:setup": "node scripts/setup-db.js",
+    "db:test": "node scripts/test-db.js",
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000"
+  },
+  "keywords": [
+    "starvyon",
+    "curriculum",
+    "artificial-intelligence",
+    "machine-learning",
+    "deep-learning",
+    "agentic-ai",
+    "neon-database"
+  ],
+  "author": "STARVYON",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "dotenv": "^16.4.7"
+  }
+}

@@ -1,0 +1,184 @@
+/* STARVYON Learn - Base Design System */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
+
+:root {
+  /* Warm editorial paper palette (No pure white, no harsh gradients, no neons, no purple/black) */
+  --bg-canvas: #fbfaf6;
+  --bg-surface: #f4f2ea;
+  --bg-surface-elevated: #eeece2;
+  --bg-inset: #e8e5db;
+  --bg-code: #f0ede3;
+
+  /* Ink typography */
+  --ink-primary: #181715;
+  --ink-secondary: #42403b;
+  --ink-muted: #6e6b63;
+  --ink-faint: #9c998f;
+
+  /* Crisp architectural borders (No drop shadows) */
+  --border-hairline: #dfdcce;
+  --border-strong: #c8c4b4;
+  --border-focus: #181715;
+
+  /* Purposeful, subdued editorial accents */
+  --accent-forest: #1e3526;
+  --accent-terracotta: #7a2d20;
+  --accent-slate: #233549;
+  --accent-ochre: #6a4f1a;
+
+  /* Status tones */
+  --status-success: #1f442b;
+  --status-info: #213a4f;
+  --status-warning: #70471b;
+
+  /* Typography */
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', Menlo, Consolas, monospace;
+
+  /* Sharp architectural corners (No soft corner radius) */
+  --radius-sharp: 0px;
+  --radius-subtle: 2px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.1rem; }
+
+p {
+  color: var(--ink-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--ink-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+}
+
+/* Base button and form elements */
+button, input, select, textarea {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+button {
+  cursor: pointer;
+  border-radius: var(--radius-subtle);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  color: var(--ink-primary);
+  padding: 0.55rem 1rem;
+  font-weight: 500;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--ink-primary);
+}
+
+.btn-primary {
+  background-color: var(--ink-primary);
+  color: var(--bg-canvas);
+  border-color: var(--ink-primary);
+}
+
+.btn-primary:hover {
+  background-color: #2b2926;
+  border-color: #2b2926;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--ink-primary);
+  border-color: var(--border-strong);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface);
+  border-color: var(--ink-primary);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-surface);
+  color: var(--ink-secondary);
+  border-radius: var(--radius-subtle);
+}
+
+.badge-forest {
+  background: #edf3ee;
+  color: var(--accent-forest);
+  border-color: #c9dbcd;
+}
+
+.badge-terracotta {
+  background: #f7ebe8;
+  color: var(--accent-terracotta);
+  border-color: #e6c5bf;
+}
+
+.badge-slate {
+  background: #ecf1f7;
+  color: var(--accent-slate);
+  border-color: #c8d7e6;
+}
+
+/* Hide helper */
+.hidden {
+  display: none !important;
+}

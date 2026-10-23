@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARVYON Learn | Engineering-Grade AI, ML, DL, GenAI and Agentic AI Pathways</title>
+  <meta name="description" content="STARVYON Learn is a rigorous, definitive educational platform for artificial intelligence, statistical machine learning, deep learning architectures, generative foundation models, and autonomous agent systems.">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/pathways.css">
+  <link rel="stylesheet" href="css/courses.css">
+  <link rel="stylesheet" href="css/viewer.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#landing" class="brand-wrapper">
+        <span class="brand-title">STARVYON Learn</span>
+        <span class="brand-tag">Curriculum</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#pathways" class="nav-link">Learning Pathways</a></li>
+          <li><a href="#courses" class="nav-link">Courses</a></li>
+          <li><a href="#profile" class="nav-link">Progress Radar</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="header-auth-pill" class="user-status-pill">
+          <span>Sign In</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dynamic SPA Mount Area -->
+  <main id="app-mount" class="main-content">
+    <!-- View rendered dynamically via STARVYONRouter -->
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>STARVYON Learn</h4>
+          <p style="font-size: 0.88rem; max-width: 320px; color: var(--ink-muted); margin-top: 0.5rem;">
+            A one-stop engineering curriculum covering mathematical formulations, production code, common failure modes, and interactive concept verification for modern artificial intelligence.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Engineering Pathways</h4>
+          <ul class="footer-links">
+            <li><a href="#pathway/path-ai-engineering">Artificial Intelligence Track (AI Engineering)</a></li>
+            <li><a href="#pathway/path-systems-infrastructure">Systems Architecture (Upcoming)</a></li>
+            <li><a href="#pathway/path-data-engineering">Data Systems (Upcoming)</a></li>
+            <li><a href="#pathways">All Learning Pathways</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Coursework</h4>
+          <ul class="footer-links">
+            <li><a href="#course/ai-foundations">AI-101: Rational Agents & Search</a></li>
+            <li><a href="#course/machine-learning">ML-201: Statistical Inference</a></li>
+            <li><a href="#course/deep-learning">DL-301: Deep Neural Networks</a></li>
+            <li><a href="#course/generative-ai">GENAI-401: Foundation Models & RAG</a></li>
+            <li><a href="#course/agentic-ai">AGENT-501: Autonomous Systems & MCP</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="#profile">Fellow Profile</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 STARVYON Learn. Architectural intelligence and systems engineering.</div>
+        <div class="footer-legal-links">
+          <a href="#terms">Terms of Service</a>
+          <a href="#privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Authentication Modal -->
+  <div id="auth-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="auth-modal-title">Fellow Sign In</h3>
+        <button id="auth-modal-close" class="modal-close-btn">&times;</button>
+      </div>
+
+      <div id="auth-error-msg" class="quiz-feedback-box hidden" style="margin-bottom: 1rem; color: var(--accent-terracotta);"></div>
+
+      <form id="auth-form" class="auth-form">
+        <div class="form-group hidden" id="auth-name-group">
+          <label class="form-label" for="auth-name">Full Name</label>
+          <input type="text" id="auth-name" class="form-input" placeholder="e.g. Elena Rostova">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="auth-email">Email Address</label>
+          <input type="email" id="auth-email" class="form-input" placeholder="fellow@starvyon.internal" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="auth-password">Password</label>
+          <input type="password" id="auth-password" class="form-input" placeholder="Minimum 6 characters" required>
+        </div>
+
+        <button type="submit" id="auth-submit-btn" class="btn-primary" style="margin-top: 0.5rem; width: 100%;">Sign In</button>
+
+        <div class="auth-toggle-row">
+          <span id="auth-toggle-mode" class="auth-toggle-link">Need an account? Register</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Logic & Course Database Scripts -->
+  <script src="env.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/data/courses/aiFoundations.js"></script>
+  <script src="js/data/courses/machineLearning.js"></script>
+  <script src="js/data/courses/deepLearning.js"></script>
+  <script src="js/data/courses/generativeAi.js"></script>
+  <script src="js/data/courses/agenticAi.js"></script>
+  <script src="js/data/pathwaysData.js"></script>
+  <script src="js/data/catalog.js"></script>
+  <script src="js/interactive.js"></script>
+  <script src="js/viewer.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* STARVYON Learn - Courses Catalog Styling */
+
+.catalog-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-hairline);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  color: var(--ink-secondary);
+  border-radius: var(--radius-subtle);
+}
+
+.filter-btn.active {
+  background: var(--ink-primary);
+  color: var(--bg-canvas);
+  border-color: var(--ink-primary);
+}
+
+.search-input-wrapper {
+  position: relative;
+  min-width: 260px;
+}
+
+.catalog-search-input {
+  width: 100%;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  color: var(--ink-primary);
+  border-radius: var(--radius-subtle);
+  outline: none;
+}
+
+.catalog-search-input:focus {
+  border-color: var(--ink-primary);
+  background: var(--bg-canvas);
+}
+
+/* 2-column Course Cards Grid (No 3 cards in a row!) */
+.courses-grid-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.course-card-editorial {
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  padding: 1.75rem;
+  border-radius: var(--radius-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-card-top {
+  margin-bottom: 1.5rem;
+}
+
+.course-card-meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.course-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card-summary {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.course-syllabus-preview {
+  list-style: decimal inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.84rem;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.course-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.course-progress-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.progress-track {
+  width: 70px;
+  height: 4px;
+  background: var(--bg-inset);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-forest);
+  width: 0%;
+}
+
+@media (max-width: 860px) {
+  .courses-grid-two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Category Sections Styling */
+.catalog-category-block {
+  margin-bottom: 3.5rem;
+}
+
+.catalog-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-hairline);
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.catalog-category-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.catalog-category-title {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin: 0;
+}
+
+.catalog-category-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.catalog-category-pathway-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.catalog-category-pathway-link a {
+  color: var(--ink-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.catalog-category-pathway-link a:hover {
+  color: var(--accent-terracotta);
+}
+
+.catalog-category-desc {
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+/* Upcoming Course Cards (Zero Shadows, Clean Dashed Borders) */
+.upcoming-course-card {
+  border: 1px dashed var(--border-strong);
+  background: var(--bg-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upcoming-course-card .upcoming-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
